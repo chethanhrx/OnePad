@@ -1,4 +1,6 @@
-// ... existing imports ...
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   plugins: [
@@ -23,12 +25,19 @@ export default defineConfig({
           },
           {
             src: '/logo.png',
-            sizes: '512x512', 
+            sizes: '512x512',
             type: 'image/png'
           }
         ]
       }
     })
   ],
-  // ... rest of config
+  server: {
+    host: '0.0.0.0'
+  },
+  // Add this for Vercel deployment
+  build: {
+    outDir: 'dist'
+  },
+  base: './'  // Important for client-side routing
 })
