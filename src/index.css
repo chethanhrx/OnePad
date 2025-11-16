@@ -1,0 +1,28 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0D0D0F;
+    color: #EDEDED;
+  }
+}
+
+@layer utilities {
+  .bg-sunrise {
+    background: linear-gradient(135deg, #A968FF 0%, #FF6F8F 50%, #FF914D 100%);
+  }
+  
+  .text-sunrise {
+    background: linear-gradient(135deg, #A968FF 0%, #FF6F8F 50%, #FF914D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .border-sunrise {
+    border-image: linear-gradient(135deg, #A968FF 0%, #FF6F8F 50%, #FF914D 100%) 1;
+  }
+}
